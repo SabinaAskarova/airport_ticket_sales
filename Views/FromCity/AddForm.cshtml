@@ -1,0 +1,18 @@
+﻿@using MyProject.DTOs.FromCityDTOs
+
+@model FromCityToAddDTO
+<div class="body">
+<form method="post" asp-controller="FromCity" asp-action="Add">
+    @*<div  hidden class="mb-3">
+        <label for="UserId" class="form-label">UserId</label>
+        <input asp-for="" type="number" class="form-control" id="UserId">
+
+    </div>*@
+    <div class="mb-3">
+        <label for="FCityName" class="form-label">From City Name</label>
+        <input asp-for="FCityName" type="text" class="form-control" id="FCityName">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

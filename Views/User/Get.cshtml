@@ -1,0 +1,27 @@
+﻿@using MyProject.DTOs.UserDTOs
+
+@model List<UserToListDTO>
+<div class="body">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>UserName</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (UserToListDTO user in Model)
+        {  
+      <tr>     
+      <td hidden>@user.UserId</td>
+      <td>@user.UserName</td>
+      <td>@user.Password</td>
+      <td>@Html.ActionLink("Update","UpdateForm","User",new { userId=user.UserId }) </td>
+      <td>@Html.ActionLink("Delete","Delete","User",new { userId=user.UserId })</td>
+      </tr>
+        }
+  </tbody>
+</table>
+</div>
+<link rel="stylesheet" href="./lib./lib/bootstrap/" >
+

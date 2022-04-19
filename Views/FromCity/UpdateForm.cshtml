@@ -1,0 +1,25 @@
+﻿@using MyProject.DTOs.FromCityDTOs
+
+@model FromCityToListDTO
+<div class="body">
+<form method="post" asp-controller="FromCity" asp-action="Update">
+
+    <div class="mb-3">
+        <label for="FCityId" class="form-label">FromCityId</label>
+        <input asp-for="FCityId" type="number" class="form-control" id="FCityId">
+    </div>
+
+    <div class="mb-3">
+        <label for="FCityName" class="form-label">From City Name</label>
+        <input asp-for="FCityName" type="text" class="form-control" id="FCityName">
+    </div>
+
+    @*<div class="mb-3">
+        <label for="IsDeleted" class="form-label">IsDeleted</label>
+        <input asp-for="IsDeleted" type="text" class="form-control" id="IsDeleted">
+    </div>
+*@
+    <button type="submit" class="btn btn-primary" asp-controller="FromCity" asp-action="Update">Submit</button>
+
+</form>
+ </div>

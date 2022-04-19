@@ -1,0 +1,26 @@
+﻿@using MyProject.DTOs.FlightDTOs;
+
+@model FlightToListDTO
+ <div class="body">
+    
+     @using (Html.BeginForm("FindTicket", "Flight", FormMethod.Post))
+     {
+        <div class="form-group">
+            @Html.Label("Haradan")
+            <br>
+            @Html.DropDownList("fId", (IEnumerable<SelectListItem>)ViewBag.FromCities, "Sheher sech")
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Haraya")
+            <br>
+            @Html.DropDownList("tId", (IEnumerable<SelectListItem>)ViewBag.ToCities,"Sheher sech")
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+     }
+     </div>

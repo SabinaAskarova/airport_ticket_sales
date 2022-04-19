@@ -1,0 +1,27 @@
+﻿@using MyProject.DTOs.ToCityDTOs
+
+@model  List<ToCityToListDTO>
+    <div class="body">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      @*<th>TCityId</th>*@
+      <th>TCityName</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (ToCityToListDTO toCity in Model)
+        {  
+      <tr>     
+      <td hidden>@toCity.TCityId</td>
+      <td>@toCity.TCityName</td>
+      <td>@Html.ActionLink("Update","UpdateForm","ToCity",new {tCityId =toCity.TCityId }) </td>
+      <td>@Html.ActionLink("Delete","Delete","ToCity",new { tCityId=toCity.TCityId })</td>
+      </tr>
+        }
+  </tbody>
+</table>
+
+<a href="/ToCity/AddForm" class="btn btn-success">Add</a>
+</div>
+<link rel="stylesheet" href="./lib./lib/bootstrap/" >

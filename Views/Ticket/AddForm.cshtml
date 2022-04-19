@@ -1,0 +1,65 @@
+﻿@using MyProject.DTOs.FlightDTOs
+@model FlightToListDTO;
+<div class="body">
+@using (Html.BeginForm("Add", "Ticket", FormMethod.Post)) 
+{  
+    <div hidden class="mb-3">
+        <label for="flightId" class="form-label">FlightId</label>
+        <input  value="@Model.FlightId" type="text" class="form-control"  name="flightId" id="flightId" />
+        @*<div >@Model.FromCity.FCityName</div>*@
+    </div>
+
+    <div class="mb-3">
+        <label for="nameSurname" class="form-label">Name Surname</label>
+        <input type="text" class="form-control" name="nameSurname" id="nameSurname" />
+    </div>
+
+    <div class="mb-3">
+        <label for="fromCityName" class="form-label">From City Name</label>
+        <input  value="@Model.FromCity.FCityName" type="text" class="form-control"  name="fromCityName" id="fromCityName" />
+        @*<div >@Model.FromCity.FCityName</div>*@
+    </div>
+
+     <div class="mb-3">
+        <label for="toCityName" class="form-label">To City Name</label>
+        <input id="toCityName" name="toCityName" value="@Model.ToCity.TCityName" type="text" class="form-control"/>
+        @*<div>@Model.ToCity.TCityName</div>*@
+    </div>
+
+    <div class="mb-3">
+        <label for="caricount" class="form-label">Count</label>
+        <input id="caricount" name="caricount" value="@Model.CariCount" type="text" class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="seatnumber" class="form-label">Seat Number</label>
+         <select name="seatnumber">
+             <option value="" selected disabled hidden>select seat</option>
+             @foreach (var item in @Model.Seats)
+            {
+                <option value="@item">@item</option>
+            }
+         </select>
+        @*<input id="caricount" name="caricount" value="@Model.CariCount" type="text" class="form-control"/>*@
+    </div>
+
+    <div class="mb-3">
+        <label for="datetime" class="form-label">Time</label>
+        <input id="datetime" name="datetime" value="@Model.Time" type="text" class="form-control"/>
+        @*<div>@Model.Time</div>*@
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input id="price" name="price" value="@Model.Price" type="number" class="form-control"/>
+        @*<div>@Model.Price</div>*@
+    </div>
+
+    @*<div class="mb-3">
+        <label for="number" class="form-label">Number</label>
+        <input id="number" name="number" type="number" class="form-control" id="Number" />
+    </div>*@
+
+    <input type="submit" value="sell" />
+}
+</div>

@@ -1,0 +1,85 @@
+﻿@using MyProject.DTOs.FlightDTOs
+
+@model  List<FlightToListDTO>
+   
+    <head>
+         <link rel="stylesheet" href="~/colorlib-booking-5/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="~/colorlib-booking-5/css/style.css" />
+
+    </head>
+    <body>
+	 <div class="body">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>From City Name</th>
+                <th>To City Name</th>
+                <th>Time</th>
+                <th>Total Count</th>
+                <th>Current Count</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (FlightToListDTO flight in Model)
+            {
+<tr>
+    <td hidden>@flight.FlightId</td>
+    <td>@flight.FromCity.FCityName</td>
+    <td>@flight.ToCity.TCityName</td>
+    <td>@flight.Time</td>
+    <td>@flight.TotalCount</td>
+    <td>@flight.CariCount</td>
+    <td>@flight.Price AZN</td>
+    <td>@Html.ActionLink("Update", "Update", "Flight", new { flightId = flight.FlightId }, new { @class = "btn btn-warning" }) </td>
+    <td>@Html.ActionLink("Delete", "Delete", "Flight", new { flightId = flight.FlightId }, new { @class = "btn btn-danger" })</td>
+</tr>}
+        </tbody>
+    </table>
+
+    <a href="/Flight/AddForm" class="btn btn-success" style="float:right">Add</a>
+
+    </div>
+    </body>
+ @*   
+<table class="table table-bordered">
+  <thead>
+    <tr>
+        <th>From City name</th>
+        <th>to city name</th>
+        <th>time</th>
+        <th>total count</th>
+        <th>Cari count</th> 
+        <th>Seats</th>
+        <th>price</th>
+    </tr>
+  </thead>
+  <tbody> 
+    @foreach (FlightToListDTO flight in Model)
+        {  
+      <tr>     
+     <td hidden>@flight.FlightId</td>
+     <td>@flight.FromCity.FCityName</td> 
+     <td>@flight.ToCity.TCityName</td>
+     <td>@flight.Time</td>
+     <td >@flight.TotalCount</td>
+     <td>@flight.CariCount</td>
+     <td>
+         <select>
+             <option value="" selected disabled hidden>see seats</option>
+             @foreach (var item in @flight.Seats)
+            {
+                <option disabled>@item</option>
+            }
+         </select>
+     </td>
+     <td>@flight.Price <sapn>AZN</sapn></td>
+     <td>@Html.ActionLink("Delete","Delete","Flight",new { flightId = flight.FlightId })</td>
+       </tr>
+        }
+ </tbody>
+ </table>
+
+<a href="/Flight/AddForm" class="btn btn-success">Add</a>*@
+
+

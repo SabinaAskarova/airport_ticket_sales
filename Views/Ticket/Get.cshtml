@@ -1,0 +1,35 @@
+﻿@using MyProject.DTOs.TicketDTOs
+
+@model  List<TicketToListDTO>
+    <div class="body">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+        @*<th>TicketId</th>*@
+        <th>NameSurname</th>
+        <th>From City name</th>
+        <th>To city name</th>
+        <th>Seat</th>
+        <th>Price</th>
+        <th>Time</th>
+    </tr>
+  </thead>
+  <tbody> 
+    @foreach (TicketToListDTO ticket in Model)
+        {  
+      <tr>    
+          <td hidden>@ticket.TicketId</td>
+          <td>@ticket.NameSurname</td>
+          <td>@ticket.FromCityName</td>
+          <td>@ticket.ToCityName</td>
+          <td>@ticket.SeatNumber</td>
+          <td>@ticket.Price AZN</td>
+          <td>@ticket.Datetime</td>
+          <td>@Html.ActionLink("Show","Show","Ticket",new {ticketId =ticket.TicketId }) </td>
+       </tr>
+        }
+  </tbody>
+</table>
+</div>
+<link rel="stylesheet" href="./lib./lib/bootstrap/" >
+

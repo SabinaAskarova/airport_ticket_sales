@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport</title>
+    <link rel="stylesheet" href="~/css/style1.css">
+   
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="navhome"><a class="duyme" asp-action="Index" asp-controller="Home">Home Page</a></div>
+        <ul class="navlist">
+            <li><a class="duyme" asp-controller="Flight" asp-action="Get">Show flight</a></li>
+            <li><a class="duyme"  asp-controller="Flight" asp-action="SaleTicket">Sell Ticket</a></li>
+            <li><a class="duyme" asp-controller="Ticket" asp-action="Get">Saled Ticket</a></li>
+            <li>
+                <div class="dropdown">
+  <a class="duyme">More...</a>
+  <div class="dropdown-content">
+  <a class="duyme" asp-controller="User" asp-action="Get">Show Users</a>
+  <a class="duyme"  asp-controller="FromCity" asp-action="Get">Show From Cities</a>
+  <a class="duyme" asp-controller="ToCity" asp-action="Get">Show To Cities </a>
+  </div>
+</div>
+            </li>
+        </ul>
+    </nav>
+
+    @RenderBody()
+</body>
+
+</html>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

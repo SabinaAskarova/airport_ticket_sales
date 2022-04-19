@@ -1,0 +1,46 @@
+﻿@using MyProject.DTOs.FlightDTOs
+
+@model List<FlightToListDTO>
+<div class="body">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>From City name</th>
+            <th>to city name</th>
+            <th>time</th>
+            <th>Cari count</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (FlightToListDTO flight in Model)
+        {  
+      <tr>     
+     <td >@flight.FlightId</td>
+     <td>@flight.FromCity.FCityName</td> 
+     <td>@flight.ToCity.TCityName</td>
+     <td>@flight.Time</td>
+     <td hidden>@flight.TotalCount</td>
+     <td>@flight.CariCount</td>
+     <td>
+         <select>
+             <option value="" selected disabled hidden>see seats</option>
+             @foreach (var item in @flight.Seats)
+            {
+                <option disabled>@item</option>
+            }
+         </select>
+     </td>
+     <td>@flight.Price <span>AZN</span></td>
+     <td>@Html.ActionLink("Sell","AddForm","Ticket",new {flightId =flight.FlightId }) </td>
+      </tr>
+        }
+    </tbody>
+</table>
+
+</div>
+
+
+
+

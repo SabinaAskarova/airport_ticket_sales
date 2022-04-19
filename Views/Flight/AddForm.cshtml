@@ -1,0 +1,45 @@
+﻿@using MyProject.DTOs.FlightDTOs;
+
+@model FlightToListDTO
+<div  class="body">
+        <form method="post" asp-controller="Flight" asp-action="Add">
+            @if (ViewBag.FromCities != null)
+            {@Html.DropDownListFor(m => m.FCityId, ViewBag.FromCities as IEnumerable<SelectListItem>,
+                                                "Sheher Seç", new { @class = "form-control select-add-placeholder", required = "required" });
+        }
+            @if (ViewBag.ToCities != null)
+            {
+@Html.DropDownListFor(m => m.TCityId, ViewBag.ToCities as IEnumerable<SelectListItem>,
+    "Sheher Seç", new { @class = "form-control select-add-placeholder", required = "required" });
+
+}
+            <div hidden lass="mb-3">
+                <label for="flightid" class="form-label">flightid</label>
+                <input type="number" hiype="number" asp-for="FlightId" class="form-control" id="flightid">
+            </div>
+
+            <div class="mb-3">
+                <label for="Time" class="form-label">Time</label>
+                <input type="datetime" asp-for="Time" class="form-control" id="Time">
+            </div>
+
+            <div id="total" class="mb-3" hidden>
+                <label for="Totalcount" class="form-label">Totalcount  </label>
+                <input asp-for="TotalCount" type="number" class="form-control"  id="add_fields_placeholderValue">
+            </div>
+                  
+            <div class="mb-3">
+                <label for="Caricount" class="form-label">  Caricount</label>
+                <input asp-for="CariCount" type="number" class="form-control" id="Caricount">
+            </div>
+
+            <div class="mb-3">
+                <label for="price" class="form-label">
+                    price
+                </label>
+                <input asp-for="Price" type="number" class="form-control" id="price">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+   
