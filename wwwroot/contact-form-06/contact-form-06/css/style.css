@@ -1634,7 +1634,7 @@ pre {
     color: #6c757d;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
-    background-color: #e9ecef;
+    background-color: aliceblue;
     opacity: 1; }
 
 select.form-control:focus::-ms-value {
@@ -8160,9 +8160,6 @@ h1, h2, h3, h4, h5,
 
 .bg-primary {
   background: #2553b8 !important; }
-
-.ftco-section {
-  padding: 7em 0; }
 
 .ftco-no-pt {
   padding-top: 0; }

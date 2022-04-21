@@ -7,10 +7,14 @@
 }
 
 body {
-    background: url('../../norwegian_kittila_airport_december_2016_3.jpg') no-repeat center center fixed !important;
+    background: url('../../../254381.webp') no-repeat center center fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     padding: 150px 0 0 0;
+}
+
+.container{
+    margin-left:350px !important;
 }

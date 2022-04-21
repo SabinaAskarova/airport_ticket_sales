@@ -116,7 +116,6 @@ namespace MyProject.Controllers
                     {
                         flights.Add(flight);
                     }
-
                 }
             }
             return View(flights);

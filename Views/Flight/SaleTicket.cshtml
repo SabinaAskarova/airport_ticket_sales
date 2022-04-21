@@ -1,26 +1,39 @@
 ﻿@using MyProject.DTOs.FlightDTOs;
 
 @model FlightToListDTO
- <div class="body">
-    
-     @using (Html.BeginForm("FindTicket", "Flight", FormMethod.Post))
-     {
-        <div class="form-group">
-            @Html.Label("Haradan")
-            <br>
-            @Html.DropDownList("fId", (IEnumerable<SelectListItem>)ViewBag.FromCities, "Sheher sech")
-        </div>
 
-        <div class="form-group">
-            @Html.Label("Haraya")
-            <br>
-            @Html.DropDownList("tId", (IEnumerable<SelectListItem>)ViewBag.ToCities,"Sheher sech")
-        </div>
+<html>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Search" class="btn btn-default" />
-            </div>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="~/colorlib-search-1/colorlib-search-1/css/main.css" rel="stylesheet" />
+
+</head>
+<body>
+
+        <div class="body">
+ <div class="s01">
+        <form asp-action="FindTicket" asp-controller="Flight" onsubmit="return main(this);" method="post">
+        <fieldset>
+          <legend>Welcome to My Site</legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+             @Html.DropDownList("fId", (IEnumerable<SelectListItem>)ViewBag.FromCities, "Where from", new { @class = "form-control select-add-placeholder", required = "required" })
+          
+          </div>
+
+          <div class="input-field second-wrap">
+              @Html.DropDownList("tId", (IEnumerable<SelectListItem>)ViewBag.ToCities, "Where to", new { @class = "form-control select-add-placeholder", required = "required" })
+
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="submit">Search</button>
+          </div>
         </div>
-     }
-     </div>
+      </form>
+    </div>
+    </div>
+    </body>
+    </html>

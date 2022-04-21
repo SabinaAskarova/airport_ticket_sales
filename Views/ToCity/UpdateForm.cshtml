@@ -1,6 +1,70 @@
 ﻿@using MyProject.DTOs.ToCityDTOs
 
 @model ToCityToListDTO
+
+
+<head>
+	<link type="text/css" rel="stylesheet" href="~/colorlib-booking-19/colorlib-booking-19/css/bootstrap.min.css" />
+
+	<link type="text/css" rel="stylesheet" href="~/colorlib-booking-19/colorlib-booking-19/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="~/colorlib-booking-19/colorlib-booking-19/css/tocityimage.css" />
+
+</head>
+<body>
+<div class="body"><div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div style="width:40%;" class="col-md-4">
+						<div class="booking-cta">
+							<h1>Lorem Ipsum Dolor Sit</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+						</div>
+					</div>
+					<div style="width:40%; margin-bottom:20px; margin-top:43px" class="col-md-7 col-md-offset-1">
+						<div class="booking-form">
+							<form method="post" asp-controller="ToCity" asp-action="Update">
+								<div class="row">
+									
+									<div class="col-md-6">
+										<div class="form-group" style="width: 300px; margin-left: 40px; margin-top:35px">
+											<span class="form-label" stye="font-size: 20px;">City Name</span>
+											<input asp-for="TCityName" class="form-control" type="text" />
+										</div>
+									</div>
+
+									@*<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">City Name</span>
+											<input asp-for="FCityName" class="form-control" type="text" />
+										</div>
+									</div>*@
+
+									<div class="col-md-6">
+										<div hidden class="form-group">
+											<span class="form-label">City Id</span>
+											<input asp-for="TCityId" class="form-control" type="number" />
+										</div>
+									</div>
+									
+								</div>
+							
+								<div class="form-btn">
+									<button style="width:100px;margin-right:30px;margin-top:-16px;margin-left: 220px; height:35px;" class="submit-btn">Update</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ </div>
+
+ </body>
+@*
 <div class="body">
 <form method="post" asp-controller="ToCity" asp-action="Update">
 
@@ -14,13 +78,13 @@
         <input asp-for="TCityName" type="text" class="form-control" id="TCityName">
     </div>
 
-    @*<div class="mb-3">
+    <div class="mb-3">
         <label for="IsDeleted" class="form-label">IsDeleted</label>
         <input asp-for="IsDeleted" type="text" class="form-control" id="IsDeleted">
     </div>
-*@
+
     <button type="submit" class="btn btn-primary" asp-controller="ToCity" asp-action="Update">Submit</button>
 
 </form>
 
-</div>
+</div>*@

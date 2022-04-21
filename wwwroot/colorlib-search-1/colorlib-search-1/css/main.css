@@ -13,9 +13,7 @@ html {
 /**
  * Remove the margin in all browsers (opinionated).
  */
-body {
-  margin: 0;
-}
+
 
 /**
  * Add the correct display in IE 9-.
@@ -36,6 +34,21 @@ section {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+
+.body {
+    height: auto;
+
+}
+body {
+    background: url('../../8_section2 jpg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding:0 !important;
+    /*padding: 150px 0 0 0;*/
 }
 
 /* Grouping content
@@ -330,20 +343,24 @@ legend {
 }
 
 .s01 {
-  min-height: 100vh;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  font-family: 'Poppins', sans-serif;
-  background: url("../images/Search_001.png");
-  background-size: cover;
-  background-position: center center;
-  padding: 15px;
+    margin-top: -100px;
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/Search_001.png");
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
 }
 
+    .s01 form .inner-form .input-field.second-wrap {
+        margin-right: 90px
+    }
 .s01 form {
   width: 100%;
   max-width: 1290px;
@@ -370,19 +387,23 @@ legend {
 
 .s01 form .inner-form .input-field {
   margin-right: 30px;
-  height: 68px;
+  height: 34px;
 }
+    .s01 form .inner-form .input-field.third-wrap{
+        height:34px;
+        margin-top:-34px
+    }
 
-.s01 form .inner-form .input-field input {
-  height: 100%;
-  background: #fff;
-  border-radius: .5px;
-  border: 0;
-  display: block;
-  width: 100%;
-  padding: 10px 32px;
-  font-size: 20px;
-}
+    .s01 form .inner-form .input-field input {
+        height: 100%;
+        background: #fff;
+        border-radius: .5px;
+        border: 0;
+        display: block;
+        width: 100%;
+        padding: 10px 32px;
+        font-size: 20px;
+    }
 
 .s01 form .inner-form .input-field input.placeholder {
   color: #9a9a9a;
@@ -407,6 +428,10 @@ legend {
 .s01 form .inner-form .input-field.first-wrap {
   -ms-flex-positive: 1;
       flex-grow: 1;
+}
+.form-control {
+    padding: 6px 12px;
+    width: 400px
 }
 
 .s01 form .inner-form .input-field.second-wrap {
@@ -481,4 +506,151 @@ legend {
   .s01 form .inner-form .input-field.third-wrap .btn-search {
     font-size: 16px;
   }
+}
+.s01 form {
+    width: 100%;
+    max-width: 1290px;
+}
+
+    .s01 form legend {
+        font-size: 72px;
+        line-height: 1;
+        color: #fff;
+        margin-bottom: 60px;
+    }
+
+    .s01 form .inner-form {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 50px 47px;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+        .s01 form .inner-form .input-field {
+            margin-right: 30px;
+            height: 68px;
+        }
+
+            .s01 form .inner-form .input-field input {
+                height: 100%;
+                background: #fff;
+                border-radius: .5px;
+                border: 0;
+                display: block;
+                width: 100%;
+                padding: 10px 32px;
+                font-size: 20px;
+            }
+
+                .s01 form .inner-form .input-field input.placeholder {
+                    color: #9a9a9a;
+                    font-size: 20px;
+                }
+
+                .s01 form .inner-form .input-field input:-moz-placeholder {
+                    color: #9a9a9a;
+                    font-size: 20px;
+                }
+
+                .s01 form .inner-form .input-field input::-webkit-input-placeholder {
+                    color: #9a9a9a;
+                    font-size: 20px;
+                }
+
+                .s01 form .inner-form .input-field input:hover, .s01 form .inner-form .input-field input:focus {
+                    box-shadow: none;
+                    outline: 0;
+                }
+
+            .s01 form .inner-form .input-field.first-wrap {
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+            }
+
+            .s01 form .inner-form .input-field.second-wrap {
+                width: 32.77%;
+                min-width: 180px;
+            }
+
+            .s01 form .inner-form .input-field.third-wrap {
+                width: 180px;
+                margin-right: 0;
+            }
+
+                .s01 form .inner-form .input-field.third-wrap .btn-search {
+                    height: 100%;
+                    width: 100%;
+                    background: #4272d7;
+                    white-space: nowrap;
+                    border-radius: .5px;
+                    font-size: 20px;
+                    color: #fff;
+                    transition: all .2s ease-out, color .2s ease-out;
+                    border: 0;
+                    cursor: pointer;
+                }
+
+                    .s01 form .inner-form .input-field.third-wrap .btn-search:hover {
+                        background: #2d62d3;
+                    }
+
+@media screen and (max-width: 992px) {
+    .s01 form legend {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .s01 form .inner-form {
+        padding: 30px 35px;
+    }
+
+        .s01 form .inner-form .input-field {
+            height: 50px;
+        }
+}
+
+@media screen and (max-width: 767px) {
+    .s01 form legend {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .s01 form .inner-form {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+        .s01 form .inner-form .input-field {
+            margin-right: 0;
+        }
+
+            .s01 form .inner-form .input-field input {
+                padding: 5px 15px;
+                font-size: 16px;
+            }
+
+            .s01 form .inner-form .input-field.first-wrap {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .s01 form .inner-form .input-field.second-wrap {
+                width: calc(50% - 10px);
+                min-width: auto;
+            }
+
+            .s01 form .inner-form .input-field.third-wrap {
+                width: calc(50% - 10px);
+            }
+
+                .s01 form .inner-form .input-field.third-wrap .btn-search {
+                    font-size: 16px;
+                }
 }
