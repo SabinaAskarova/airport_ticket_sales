@@ -1,11 +1,11 @@
 .section {
-	position: relative;
+	position: fixed;
 	height: 100vh;
 }
 
 .section .section-center {
 	position: absolute;
-	top: 50%;
+	top: 25%;
 	left: 0;
 	right: 0;
 	-webkit-transform: translateY(-50%);
@@ -19,7 +19,23 @@
 	background-position: center;
 	color: #191a1e;
 }
+.body {
+	height: auto;
+	margin-top: 150px;
+	padding: 0 90px;
+	width: 1300px;
+	margin: auto;
+	
+}
 
+body {
+	background: url('../../colorlib-booking-19/img/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding: 150px 0 0 0;
+}
 .booking-form {
 	position: relative;
 	background: #fff;

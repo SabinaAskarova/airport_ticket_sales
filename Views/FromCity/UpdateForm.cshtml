@@ -1,25 +1,47 @@
 ﻿@using MyProject.DTOs.FromCityDTOs
 
 @model FromCityToListDTO
-<div class="body">
-<form method="post" asp-controller="FromCity" asp-action="Update">
+<div class="body"><div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div style="width:40%;" class="col-md-4">
+						<div class="booking-cta">
+							<h1>Book your flight today</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+						</div>
+					</div>
+					<div style="width:40%; margin-bottom:20px" class="col-md-7 col-md-offset-1">
+						<div class="booking-form">
+							<form method="post" asp-controller="FromCity" asp-action="Update">
+								<div class="row">
+									
 
-    <div class="mb-3">
-        <label for="FCityId" class="form-label">FromCityId</label>
-        <input asp-for="FCityId" type="number" class="form-control" id="FCityId">
-    </div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">City Name</span>
+											<input asp-for="FCityName" class="form-control" type="text" />
+										</div>
+									</div>
 
-    <div class="mb-3">
-        <label for="FCityName" class="form-label">From City Name</label>
-        <input asp-for="FCityName" type="text" class="form-control" id="FCityName">
-    </div>
-
-    @*<div class="mb-3">
-        <label for="IsDeleted" class="form-label">IsDeleted</label>
-        <input asp-for="IsDeleted" type="text" class="form-control" id="IsDeleted">
-    </div>
-*@
-    <button type="submit" class="btn btn-primary" asp-controller="FromCity" asp-action="Update">Submit</button>
-
+									<div class="col-md-6">
+										<div hidden class="form-group">
+											<span class="form-label">City Id</span>
+											<input asp-for="FCityId" class="form-control" type="number" />
+										</div>
+									</div>
+									
+								</div>
+							
+								<div class="form-btn">
+									<button style="width:100px; margin:auto" asp-controller="FromCity" asp-action="Update" class="submit-btn">Update</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </form>
  </div>

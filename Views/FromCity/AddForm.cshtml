@@ -2,17 +2,39 @@
 
 @model FromCityToAddDTO
 <div class="body">
-<form method="post" asp-controller="FromCity" asp-action="Add">
-    @*<div  hidden class="mb-3">
-        <label for="UserId" class="form-label">UserId</label>
-        <input asp-for="" type="number" class="form-control" id="UserId">
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div style="width:40%;" class="col-md-4">
+						<div class="booking-cta">
+							<h1>Book your flight today</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
+						</div>
+					</div>
+					<div style="width:40%; margin-bottom:20px" class="col-md-7 col-md-offset-1">
+						<div class="booking-form">
+							<form method="post" asp-controller="FromCity" asp-action="Add">						
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group" style="width: 300px; margin-left: 40px;">
+											<span class="form-label" stye="font-size: 14px;">City Name</span>
+											<input asp-for="FCityName" class="form-control" type="text" placeholder="from City name">
+										</div>
+									</div>
+									
+								</div>
+							
+								<div class="form-btn">
+									<button style="width:100px;margin-right:30px;margin-top:-16px;margin-left: 220px; height:35px;" class="submit-btn">Save</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    </div>*@
-    <div class="mb-3">
-        <label for="FCityName" class="form-label">From City Name</label>
-        <input asp-for="FCityName" type="text" class="form-control" id="FCityName">
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
