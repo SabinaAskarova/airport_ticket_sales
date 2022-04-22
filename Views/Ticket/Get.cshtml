@@ -1,11 +1,47 @@
 ﻿@using MyProject.DTOs.TicketDTOs
 
 @model  List<TicketToListDTO>
+<head>
+    <link rel="stylesheet" href="~/css/getticket.css">
+
+</head>
+<body>
     <div class="body">
+          <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-left">Name Surname</th>
+                <th class="text-left">From City Name</th>
+                <th class="text-left">To City Name</th>
+                <th class="text-left">Seat</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Time</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            @foreach (TicketToListDTO ticket in Model)
+            {
+                <tr>
+                    <td hidden>@ticket.TicketId</td>
+                    <td class="text-left">@ticket.NameSurname</td>
+                    <td class="text-left">@ticket.FromCityName</td>
+                    <td class="text-left">@ticket.ToCityName</td>
+                    <td class="text-left">@ticket.SeatNumber</td>
+                    <td class="text-left">@ticket.Price AZN</td>
+                    <td class="text-left">@ticket.Datetime</td>
+                    <td class="text-left buttons" >@Html.ActionLink("Show", "Show", "Ticket", new { ticketId = ticket.TicketId },new {style="border:2px solid black;padding: 3px;text-decoration: none;"}) </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</body>
+
+@*
 <table class="table table-bordered">
   <thead>
     <tr>
-        @*<th>TicketId</th>*@
         <th>NameSurname</th>
         <th>From City name</th>
         <th>To city name</th>
@@ -30,6 +66,4 @@
         }
   </tbody>
 </table>
-</div>
-<link rel="stylesheet" href="./lib./lib/bootstrap/" >
-
+*@
