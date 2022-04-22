@@ -1030,11 +1030,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\acer\\Documents\\C#\\MyProject\\MyProject\\MyProject.csproj",
+      "projectUniqueName": "D:\\demo1\\MyProject\\MyProject\\MyProject.csproj",
       "projectName": "MyProject",
-      "projectPath": "C:\\Users\\acer\\Documents\\C#\\MyProject\\MyProject\\MyProject.csproj",
+      "projectPath": "D:\\demo1\\MyProject\\MyProject\\MyProject.csproj",
       "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\acer\\Documents\\C#\\MyProject\\MyProject\\obj\\",
+      "outputPath": "D:\\demo1\\MyProject\\MyProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
