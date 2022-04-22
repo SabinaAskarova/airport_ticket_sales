@@ -1,7 +1,11 @@
 ﻿@using MyProject.DTOs.UserDTOs
 
 @model List<UserToListDTO>
+<head>
+   <link rel="stylesheet" href="~/css/user.css">
+</head>
 <div class="body">
+    <div class="container">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -16,12 +20,13 @@
       <td hidden>@user.UserId</td>
       <td>@user.UserName</td>
       <td>@user.Password</td>
-      <td>@Html.ActionLink("Update","UpdateForm","User",new { userId=user.UserId }) </td>
-      <td>@Html.ActionLink("Delete","Delete","User",new { userId=user.UserId })</td>
+      <td>@Html.ActionLink("Update","UpdateForm","User",new { userId=user.UserId },new{style="border-radius:4px"}) </td>
+      <td>@Html.ActionLink("Delete","Delete","User",new { userId=user.UserId },new{style="border-radius:4px"})</td>
       </tr>
         }
   </tbody>
 </table>
+</div>
 </div>
 <link rel="stylesheet" href="./lib./lib/bootstrap/" >
 
