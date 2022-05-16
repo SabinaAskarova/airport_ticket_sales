@@ -8,16 +8,7 @@ html {
   /* 2 */
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers (opinionated).
- */
 
-
-/**
- * Add the correct display in IE 9-.
- */
 article,
 aside,
 footer,
@@ -25,6 +16,9 @@ header,
 nav,
 section {
   display: block;
+}
+.navlist{
+    margin-top:-22px !important;
 }
 
 /**

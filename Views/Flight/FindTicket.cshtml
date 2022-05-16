@@ -15,7 +15,7 @@
 		<div class="grid-1-5">
 			<h3><span class="uppercase">From City: </span> @flight.FromCity.FCityName</h3>
 			<h3><span class="uppercase">To City: </span> @flight.ToCity.TCityName</h3>
-			<p><span>Price: </span>@flight.Price<span class="uppercase">AZN</span></p>
+			<p><span>Price: </span>@flight.Price<span class="uppercase"> AZN</span></p>
 			<ul>
 				<li><p ><span>Time: </span>@flight.Time</p></li>
 				<li><p ><span>Count: </span>@flight.CariCount</p></li>
@@ -35,95 +35,4 @@
 		
 	</div>
     </div>
-@*
-	<div class="grid-1-5">
-			<h2>Startup</h2>
-			<h3><sup>$</sup>79<span class="small">/mo</span></h3>
-			<p>25,000 monthly visits</p>
-			<ul>
-				<li>Limited Email Support</li>
-				<li>Unlimited Data Transfer</li>
-				<li>20GB Local Storage</li>
-			</ul>		
-			<a href="" class="button">Sign Up</a>	
-		</div>
-		<div class="grid-1-5">
-			<h2>Growth</h2>
-			<h3><sup>$</sup>179<span class="small">/mo</span></h3>
-			<p>75,000 monthly visits</p>
-			<ul>
-				<li>Email Support</li>
-				<li>Unlimited Data Transfer</li>
-				<li>30GB Local Storage</li>
-			</ul>	
-			<a href="" class="button">Sign Up</a>		
-		</div>
-		<div class="grid-1-5">
-			<h2>Premium</h2>
-			<h3><sup>$</sup>499<span class="small">/mo</span></h3>
-			<p>225,000 monthly visits</p>
-			<ul>
-				<li>Email Support</li>
-				<li>Phone Support</li>
-				<li>Unlimited Data Transfer</li>
-			</ul>	
-			<a href="" class="button">Sign Up</a>		
-		</div>
-		<div class="grid-1-5">
-			<h2>Enterprise</h2>
-			<h3><span class="uppercase">Let's Talk</span></h3>
-			<p>1M+ monthly visits</p>
-			<ul>
-				<li>Email Support</li>
-				<li>Phone Support</li>
-				<li>Dedicated Environment</li>
-				<li>Customized Plan</li>
-			</ul>
-			<a href="" class="button">Sign Up</a>
-		</div>	
-
-
-
-<div class="body">
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>From City name</th>
-            <th>to city name</th>
-            <th>time</th>
-            <th>Cari count</th>
-            <th>price</th>
-        </tr>
-    </thead>
-    <tbody>
-       @foreach (FlightToListDTO flight in Model)
-        {  
-      <tr>     
-     <td >@flight.FlightId</td>
-     <td>@flight.FromCity.FCityName</td> 
-     <td>@flight.ToCity.TCityName</td>
-     <td>@flight.Time</td>
-     <td hidden>@flight.TotalCount</td>
-     <td>@flight.CariCount</td>
-     <td>
-         <select>
-             <option value="" selected disabled hidden>see seats</option>
-             @foreach (var item in @flight.Seats)
-            {
-                <option disabled>@item</option>
-            }
-         </select>
-     </td>
-     <td>@flight.Price <span>AZN</span></td>
-     <td>@Html.ActionLink("Sell","AddForm","Ticket",new {flightId =flight.FlightId }) </td>
-      </tr>
-        }
-    </tbody>
-</table>
-
-</div>
-
-
-*@
 

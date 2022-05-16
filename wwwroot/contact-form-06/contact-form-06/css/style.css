@@ -1,9 +1,12 @@
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
+.navlist{
+    margin-top:-33px !important;
+    padding:2px !important;
+}
+nav{
+    z-index:1 !important;
+    padding:2px !important;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -451,6 +454,7 @@ pre {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
+  margin-top:-190px !important;
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
@@ -3361,7 +3365,9 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none; }
+  list-style: none;
+  padding:2px !important;
+}
 
 .nav-link {
   display: block;

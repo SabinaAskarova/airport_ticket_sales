@@ -33,7 +33,7 @@ namespace MyProject.Controllers
                 {
                     if (user.UserName == userToAddDTO.UserName && user.Password == userToAddDTO.Password)
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("SaleTicket", "Flight");
                     }
                 }
             }
@@ -54,21 +54,11 @@ namespace MyProject.Controllers
             ValidationResult validationResult = userValidator.Validate(userToAddDTO);
             if (validationResult.IsValid)
             {
-                List<UserToListDTO> users = _userService.Get();
-
-                foreach (UserToListDTO user in users)
-                {
-                    if (user.UserName == userToAddDTO.UserName && user.Password == userToAddDTO.Password)
-                    {
-                        return View("Index");
-                    }
-
-                    else
-                    {
+                
                         _userService.Add(userToAddDTO);
-                        break;
-                    }
-                }
+                     
+                    
+                
             }
             else
             {

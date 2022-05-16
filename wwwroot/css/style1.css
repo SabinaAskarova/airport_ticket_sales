@@ -8,7 +8,7 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: blueviolet;
+    background-color: ghostwhite !important;
     padding: 15px;
     display: flex;
 }
@@ -51,12 +51,14 @@ body {
 }
 
 .duyme:hover {
-    background-color: coral !important;
+    background-color:aliceblue !important;
     border-radius: 13px;
     text-decoration:none;
 }
-
-
+.dropdown-content a:hover {
+    background-color: bisque !important;
+    color: black !important;
+}
 
 .dropdown {
     display: inline-block;
@@ -68,10 +70,10 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 100% ;
+    width: 100%;
     overflow: auto;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-    background-color: blueviolet
+    background-color: ghostwhite !important;
 }
 
 .dropdown:hover .dropdown-content {

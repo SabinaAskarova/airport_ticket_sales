@@ -95,7 +95,6 @@ namespace MyProject.Controllers
                 _flightService.Update(flightToUpdateDTO);
                 return RedirectToAction("Get");
             }
-            //return View();
         }
 
         public IActionResult Show(int ticketId)

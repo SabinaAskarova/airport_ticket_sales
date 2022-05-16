@@ -48,53 +48,53 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="fromCityName">From City Name</label>
-                                                <input disabled value="@Model.FromCity.FCityName" type="text" class="form-control" name="fromCityName" id="fromCityName" />
+                                                <input readonly="readonly" value="@Model.FromCity.FCityName" type="text" class="form-control" name="fromCityName" id="fromCityName" />
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="toCityName">To City Name</label>
-                                                <input value="@Model.ToCity.TCityName" type="text" class="form-control" name="toCityName" id="toCityName" />
+                                                <input readonly="readonly" value="@Model.ToCity.TCityName" type="text" class="form-control" name="toCityName" id="toCityName" />
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                       @* <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="caricount">Cari Count </label>
                                                 <input disabled asp-for="@Model.CariCount type=" text" class="form-control" name="caricount" id="caricount" />
                                             </div>
-                                        </div>
+                                        </div>*@
 
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="datetime">Current Count </label>
-                                                <input disabled asp-for="@Model.CariCount" type="number" class="form-control" name="datetime" id="datetime" />
+                                                <label class="label" for="caricount">Current Count </label>
+                                                <input readonly="readonly" asp-for="@Model.CariCount" type="number" class="form-control" name="caricount" id="caricount" />
                                             </div>
                                         </div>
 
                                           <div class="col-md-12">
                                             <div class="form-group">
                                                  <label class="label" for="seatnumber" class="form-label">Seat Number</label><br>
-         <select name="seatnumber">
-             <option value="" selected disabled hidden>select seat</option>
-             @foreach (var item in @Model.Seats)
-            {
-                <option value="@item">@item</option>
-            }
-         </select>
+                                                     <select name="seatnumber">
+                                                         <option value="" selected disabled hidden>select seat</option>
+                                                         @foreach (var item in @Model.Seats)
+                                                        {
+                                                            <option value="@item">@item</option>
+                                                        }
+                                                     </select>
                                              </div>
                                         </div>
 
                                          <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="time">Time </label>
-                                                <input disabled asp-for="@Model.Time" class="form-control" name="time" id="time" />
+                                                <input readonly="readonly" asp-for="@Model.Time" class="form-control" name="time" id="time" />
                                             </div>
                                         </div>
 
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="price">Price (AZN)</label>
-                                                <input disabled asp-for="@Model.Price" type="number" class="form-control" name="price" id="price" />
+                                                <input readonly="readonly" asp-for="@Model.Price" type="number" class="form-control" name="price" id="price" />
                                             </div>
                                         </div>
 
