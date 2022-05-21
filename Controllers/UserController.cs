@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.BLL.IServices;
 using MyProject.Core.Validations;
@@ -22,52 +23,65 @@ namespace MyProject.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Login(UserToAddDTO userToAddDTO)
         {
-            UserValidator userValidator = new UserValidator();
-            ValidationResult validationResult = userValidator.Validate(userToAddDTO);
-            if (validationResult.IsValid)
+            int security = 12345;
+
+            ///*UserValidator*/ userValidator = new UserValidator();
+            //ValidationResult validationResult = userValidator.Validate(userToAddDTO);
+            if (ModelState.IsValid)
             {
                 List<UserToListDTO> users = _userService.Get();
                 foreach (UserToListDTO user in users)
                 {
                     if (user.UserName == userToAddDTO.UserName && user.Password == userToAddDTO.Password)
                     {
-                        return RedirectToAction("SaleTicket", "Flight");
+                        if (security == user.SecurityCode)
+                        {
+                            TempData["SecurityCode"] = security;
+                            return RedirectToAction("SaleTicket", "Flight");
+                        }
+                        else
+                        {
+                            TempData["SecurityCode"] = null;
+                            return RedirectToAction("SaleTicket", "Flight");
+
+                        }
                     }
                 }
             }
-            else
-            {
-                foreach (var item in validationResult.Errors)
-                {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                }
-                return View("Index");
-            }
+            //else
+            //{
+            //    foreach (var item in validationResult.Errors)
+            //    {
+            //        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            //    }
+            //    return View("Index");
+            //}
             return RedirectToAction("Login");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Registr(UserToAddDTO userToAddDTO)
         {
-            UserValidator userValidator = new UserValidator();
-            ValidationResult validationResult = userValidator.Validate(userToAddDTO);
-            if (validationResult.IsValid)
+            //UserValidator userValidator = new UserValidator();
+            //ValidationResult validationResult = userValidator.Validate(userToAddDTO);
+            if (ModelState.IsValid)
             {
-                
-                        _userService.Add(userToAddDTO);
-                     
-                    
-                
+                _userService.Add(userToAddDTO);
+                                   
             }
-            else
-            {
-                foreach (var item in validationResult.Errors)
-                {
-                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-                }
-                return View("Index");
-            }
+            //else
+            //{
+            //    foreach (var item in validationResult.Errors)
+            //    {
+            //        ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+            //    }
+            //    return View("Index");
+            //}
             return RedirectToAction("Index");
         }
 

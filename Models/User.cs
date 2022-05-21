@@ -9,7 +9,7 @@ namespace MyProject.Models
         [Required(ErrorMessage = "Please enter username")]
         public string UserName { get; set; }
         [Required(ErrorMessage = "Please enter password")]
-        [MinLength(8)]
+        [StringLength(20, MinimumLength = 5)]
         public string Password { get; set; }
         [Required]
         public int SecurityCode { get; set; }

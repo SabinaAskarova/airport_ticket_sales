@@ -36,6 +36,16 @@ body {
     padding: 0 !important;
     /*padding: 150px 0 0 0;*/
 }
+nav{
+    padding:0 !important;
+}
+.navhome {
+    margin-bottom: 22px !important;
+    margin-top:11px !important;
+}
+.navlist li {
+    margin-top: 13px !important;
+}
 .container {
     margin: 150px auto;
     width: 90%;

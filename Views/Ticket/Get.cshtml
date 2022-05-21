@@ -38,32 +38,11 @@
 </div>
 </body>
 
-@*
-<table class="table table-bordered">
-  <thead>
-    <tr>
-        <th>NameSurname</th>
-        <th>From City name</th>
-        <th>To city name</th>
-        <th>Seat</th>
-        <th>Price</th>
-        <th>Time</th>
-    </tr>
-  </thead>
-  <tbody> 
-    @foreach (TicketToListDTO ticket in Model)
-        {  
-      <tr>    
-          <td hidden>@ticket.TicketId</td>
-          <td>@ticket.NameSurname</td>
-          <td>@ticket.FromCityName</td>
-          <td>@ticket.ToCityName</td>
-          <td>@ticket.SeatNumber</td>
-          <td>@ticket.Price AZN</td>
-          <td>@ticket.Datetime</td>
-          <td>@Html.ActionLink("Show","Show","Ticket",new {ticketId =ticket.TicketId }) </td>
-       </tr>
-        }
-  </tbody>
-</table>
-*@
+
+ @if (TempData["SecurityCode"] == null)
+    {
+        <style>
+         .navbar{margin-right:900px !important;}
+    </style>
+    }
+

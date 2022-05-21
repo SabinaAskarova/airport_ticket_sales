@@ -9,6 +9,7 @@ namespace MyProject.DTOs.UserDTOs
         [Required]
         [MinLength(8)]
         public string Password { get; set; }
+        public int SecurityCode { get; set; }
     }
 }
 
