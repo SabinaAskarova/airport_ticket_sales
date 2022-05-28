@@ -24,17 +24,26 @@ namespace MyProject.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Add(FromCityToAddDTO fromCityToAddDTO)
         {
-            _fromCityService.Add(fromCityToAddDTO);
-            return RedirectToAction("Get");
+            if (ModelState.IsValid)
+            {
+                _fromCityService.Add(fromCityToAddDTO);
+                return RedirectToAction("Get");
+            }
+            return View("AddForm",fromCityToAddDTO);
         }
 
         public IActionResult UpdateForm(int fCityId)
         {
-            FromCityToListDTO fCity = _fromCityService.GetById(fCityId);
-            return View(fCity);
+            if (ModelState.IsValid)
+            {
+                FromCityToListDTO fCity = _fromCityService.GetById(fCityId);
+                return View(fCity);
+            }
+            return View("UpdateForm");
         }
 
         public IActionResult Update(FromCityToUpdateDTO fromCityToUpdateDTO)

@@ -22,8 +22,13 @@ namespace MyProject.Controllers
 
         public IActionResult Add(ToCityAddDTO toCityAddDTO)
         {
-            _toCityService.Add(toCityAddDTO);
-            return RedirectToAction("Get");
+            if (ModelState.IsValid)
+            {
+                _toCityService.Add(toCityAddDTO);
+                return RedirectToAction("Get");
+            }
+            return View("AddForm",toCityAddDTO);
+            
         }
 
         public IActionResult AddForm()
@@ -33,8 +38,12 @@ namespace MyProject.Controllers
 
         public IActionResult UpdateForm(int tCityId)
         {
-            ToCityToListDTO tCity = _toCityService.GetById(tCityId);
-            return View(tCity);
+            if (ModelState.IsValid)
+            {
+                ToCityToListDTO tCity = _toCityService.GetById(tCityId);
+                return View(tCity);
+            }
+            return View("UpdateForm");
         }
 
         public IActionResult Update(ToCityToUpdateDTO toCityToUpdateDTO)

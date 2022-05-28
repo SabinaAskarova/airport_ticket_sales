@@ -27,7 +27,9 @@
 									<div class="col-md-6">
 										<div class="form-group" style="width: 300px; margin-left: 40px; margin-top:35px">
 											<span class="form-label" stye="font-size: 14px;">City Name</span>
-											<input asp-for="TCityName" class="form-control" type="text" placeholder=" add to city name">
+											<input asp-for="@Model.TCityName" class="form-control" type="text" placeholder=" add to city name">
+											@Html.ValidationMessageFor(model => model.TCityName, "", new { @class = "text-danger" })
+
 										</div>
 									</div>
 									

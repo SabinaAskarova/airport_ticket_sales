@@ -10,9 +10,9 @@ namespace MyProject.Controllers
 {
     public class UserController : Controller
     {
-        
+       
         public IUserService _userService;
-
+ 
         public UserController(IUserService userService)
         {
             _userService = userService;
@@ -60,7 +60,7 @@ namespace MyProject.Controllers
             //    }
             //    return View("Index");
             //}
-            return RedirectToAction("Login");
+            return View("Index",userToAddDTO);
         }
 
         [HttpPost]
@@ -82,7 +82,7 @@ namespace MyProject.Controllers
             //    }
             //    return View("Index");
             //}
-            return RedirectToAction("Index");
+            return View("Index", userToAddDTO);
         }
 
         public IActionResult Get()

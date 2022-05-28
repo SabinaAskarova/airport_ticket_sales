@@ -17,6 +17,7 @@
                 <th>Time</th>
                 <th>Total Count</th>
                 <th>Current Count</th>
+
                 <th>Price</th>
             </tr>
         </thead>
@@ -30,19 +31,20 @@
     <td>@flight.Time</td>
     <td>@flight.TotalCount</td>
     <td>@flight.CariCount</td>
+
     <td>@flight.Price AZN</td>
-    @if (TempData["SecurityCode"] != null)
-                    {
+ @*   @if (TempData["SecurityCode"] != null)
+                    {*@
     <td>@Html.ActionLink("Update", "Update", "Flight", new { flightId = flight.FlightId }, new { @class = "btn btn-warning" }) </td>
     <td>@Html.ActionLink("Delete", "Delete", "Flight", new { flightId = flight.FlightId }, new { @class = "btn btn-danger" })</td>
-                    }
+                    @*}*@
 </tr>}
         </tbody>
     </table>
-    @if (TempData["SecurityCode"] != null)
-                    {
+   @* @if (TempData["SecurityCode"] != null)
+                    {*@
     <a href="/Flight/AddForm" class="btn btn-success" style="float:right">Add</a>
-                    }
+                    @*}*@
     </div>
     </body>
  

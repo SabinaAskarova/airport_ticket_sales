@@ -207,7 +207,6 @@ D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\ToCity\Get.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\ToCity\UpdateForm.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\User\Get.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
-D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\User\Registr.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\User\UpdateForm.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Matrix layihe\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs

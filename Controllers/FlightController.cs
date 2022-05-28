@@ -90,7 +90,6 @@ namespace MyProject.Controllers
             ViewBag.FromCities = new SelectList(_fromCityService.Get(), "FCityId", "FCityName");
             ViewBag.ToCities = new SelectList(_iToCityService.Get(), "TCityId", "TCityName");
 
-
             return View();
         }
 

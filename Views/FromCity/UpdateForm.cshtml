@@ -26,7 +26,9 @@
 									<div class="col-md-6">
 										<div class="form-group" style="width: 300px; margin-left: 40px; margin-top:35px">
 											<span class="form-label" stye="font-size: 20px;">City Name</span>
-											<input asp-for="FCityName" class="form-control" type="text" />
+											<input asp-for="@Model.FCityName" class="form-control" type="text" />
+                                @Html.ValidationMessageFor(model => model.FCityName, "", new { @class = "text-danger" })
+
 										</div>
 									</div>
 

@@ -49,7 +49,9 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <span class="form-label">Time</span>
-                                        <input asp-for="Time" class="form-control" type="date" required>
+                                        <input asp-for="@Model.Time" class="form-control" type="date" required>
+                                @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+
                                     </div>
                                 </div>
                                 <div hidden lass="mb-3">
@@ -61,14 +63,16 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <span class="form-label">Total Count</span>
-                                        <input asp-for="TotalCount" class="form-control" type="number" required>
+                                        <input asp-for="@Model.TotalCount" class="form-control" type="number" required>
+                                @Html.ValidationMessageFor(model => model.TotalCount, "", new { @class = "text-danger" })
 
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <span class="form-label">Currrent Count</span>
-                                        <input asp-for="CariCount" class="form-control" type="number" required>
+                                        <input asp-for="@Model.CariCount" class="form-control" type="number" required>
+                                @Html.ValidationMessageFor(model => model.CariCount, "", new { @class = "text-danger" })
 
                                     </div>
                                 </div>
@@ -76,7 +80,8 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <span class="form-label">Price</span>
-                                        <input asp-for="Price" class="form-control" type="number" required>
+                                        <input asp-for="@Model.Price" class="form-control" type="number" required>
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
 
                                     </div>
                                 </div>

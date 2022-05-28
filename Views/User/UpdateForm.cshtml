@@ -12,18 +12,20 @@
 <form method="post" asp-controller="User" asp-action="Update">
     <div hidden class="mb-3">
         <label for="UserId" class="form-label">UserId</label>
-        <input asp-for="UserId" type="number" class="form-control" id="UserId">
+        <input asp-for="@Model.UserId" type="number" class="form-control" id="UserId">
     </div>
 
     <div class="inputbox">
         <span>Username</span><br />
-        <input asp-for="UserName" type="text" class="form-control" id="UserName">
-      
+        <input asp-for="@Model.UserName" type="text" class="form-control" id="UserName">
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
     </div>
     <br />
     <div class="inputbox">
         <span>Password</span><br />
-        <input asp-for="Password" type="text" class="form-control" id="Password">
+        <input asp-for="@Model.Password" type="text" class="form-control" id="Password">
+         @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
       
     </div>
     <br />

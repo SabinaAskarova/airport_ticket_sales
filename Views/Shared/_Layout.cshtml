@@ -19,8 +19,8 @@
             <li><a class="duyme" asp-controller="Flight" asp-action="Get">Show flight</a></li>
             <li><a class="duyme"  asp-controller="Flight" asp-action="SaleTicket">Sell Ticket</a></li>
             <li><a class="duyme" asp-controller="Ticket" asp-action="Get">Saled Ticket</a></li>
-            @if (TempData["SecurityCode"] != null)
-                    {
+      @*      @if (TempData["SecurityCode"] != null)
+                    {*@
             <li>
                 <div class="dropdown">
   <a class="duyme">More...</a>
@@ -31,7 +31,7 @@
   </div>
 </div>
             </li>
-                    }
+                    @*}*@
         </ul>
     </nav>
 
